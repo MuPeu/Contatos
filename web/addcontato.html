@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form method="post" action="addcontato.jsp">
+            <h2>CADASTRO DE CONTATO:</h2>
+            <input type="text" placeholder="CPF" name="cpf" id="cpf" size="11" minlength="11" maxlength="11" required>
+            <br><br>
+            <input type="text" placeholder="Primeiro Nome" name="pnome" id="pnome" maxlength="20" required>
+            <br><br>
+            <input type="text" placeholder="Ultimo Nome" name="unome" id="unome" maxlength="60" required>
+            <br><br>
+            <input type="number" placeholder="Mês de Nascimento" name="mes" id="mes" min="1" max="12" required>
+            <br><br>
+            <input type="text" placeholder="DDD" name="ddd" id="ddd" minlength="2" maxlength="2" required>
+            <br><br>
+            <input type="text" placeholder="Número de Celular" name="celular" id="celular" minlength="9" maxlength="9" required>
+            <br><br>
+            <input type="text" placeholder="E-mail" name="email" id="email" maxlength="30" required>
+            <br><br>
+            <input type="text" placeholder="Endereço" name="endereco" id="endereco" maxlength="50" required>
+            <br><br>
+            <input type="text" placeholder="Cidade" name="cidade" id="cidade" maxlength="20" required>
+            <br><br>
+            <input type="text" placeholder="Estado" name="estado" id="estado" minlength="2" maxlength="2" required>
+            <br><br>
+            <input type="number" placeholder="ID" name="id" id="id">
+            <br><br>
+            <input type="submit" value="Salvar">
+        </form>
+    </body>
+</html>
