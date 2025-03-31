@@ -23,9 +23,18 @@
             cidade=request.getParameter("cidade");
             estado=request.getParameter("estado");
             
-            int mes, id;
-            mes=Integer.parseInt(request.getParameter("mes_nacismento"));
-            id=Integer.parseInt(request.getParameter("id"));
+             // Verificar e converter os valores numéricos com segurança
+            int mes_nascimento = 0, id = 0;
+
+            String mesNascimentoStr = request.getParameter("mes_nascimento");
+            if (mesNascimentoStr != null && !mesNascimentoStr.isEmpty()) {
+                mes_nascimento = Integer.parseInt(mesNascimentoStr);
+            }
+
+            String idStr = request.getParameter("id");
+            if (idStr != null && !idStr.isEmpty()) {
+                id = Integer.parseInt(idStr);
+            }
             
             //fazer a conexão com o banco de dados
             try{
@@ -40,19 +49,28 @@
                 conecta=DriverManager.getConnection(url,user,password);
                 
                 //inserindo dados na tabela do banco de dados
-                String sql=("INSERT INTO tb_contato_murilo VALUES (?,?,?,?,?,?,?,?,?,?,?)");
+                String sql;
+                if (idStr != null && !idStr.isEmpty()) {
+                    sql = "INSERT INTO tb_contato_murilo (CPF, primeiro_nome, ultimo_nome, mes_nascimento, DDD, celular, email, endereco, cidade, estado, id) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+                } else {
+                    sql = "INSERT INTO tb_contato_murilo (CPF, primeiro_nome, ultimo_nome, mes_nascimento, DDD, celular, email, endereco, cidade, estado) VALUES (?,?,?,?,?,?,?,?,?,?)";
+                }
                 st=conecta.prepareStatement(sql);
                 st.setString(1,cpf);
                 st.setString(2,pnome);
                 st.setString(3,unome);
-                st.setInt(4,mes);
+                st.setInt(4,mes_nascimento);
                 st.setString(5,ddd);
                 st.setString(6,celular);
                 st.setString(7,email);
                 st.setString(8,endereco);
                 st.setString(9,cidade);
                 st.setString(10,estado);
-                st.setInt(11,id);
+                
+                if (idStr != null && !idStr.isEmpty()) {
+                    st.setInt(11, id);
+                }
+                
                 st.executeUpdate(); //executar a instrução INSERT
                 out.print("<p style='color:blue;font-size:25px'>Contato Cadastrado com Sucesso!</p>");
             }catch (Exception x){

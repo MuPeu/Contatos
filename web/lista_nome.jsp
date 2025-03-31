@@ -61,7 +61,7 @@
                     <%=rs.getString("mes_nascimento")%>
                 </td>
                 <td>
-                    <a href="excpro.jsp?codigo=<%= rs.getString("CPF") %>">Excluir</a>
+                    <a href="excluir.jsp?id_cpf=<%=rs.getString("id_cpf")%>">Excluir</a>
                 </td>
             </tr>
             <%

@@ -62,7 +62,7 @@
                     <%=rs.getString("email")%>
                 </td>
                 <td>
-                    <a href="excpro.jsp?codigo=<%= rs.getString("id") %>">Excluir</a>
+                    <a href="excluir.jsp?id_cpf=<%= rs.getString("id_cpf") %>">Excluir</a>
                 </td>
             </tr>
             <%
