@@ -26,3 +26,9 @@ h1{
     align-content: center;
     color: blue;
 }
+
+button{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}

@@ -15,8 +15,8 @@
             id_cpf=Integer.parseInt(request.getParameter("id_cpf"));
             
             String pnome, unome;
-            pnome=request.getParameter("pnome");
-            unome=request.getParameter("unome");
+            pnome=request.getParameter("primeiro_nome");
+            unome=request.getParameter("ultimo_nome");
             
             try{
                 //conectar ao banco de dados bancojsp
@@ -42,5 +42,8 @@
                 out.print("Entre em Contato com o Administrador e Informe o Erro.");
             }
         %>
+        <br><a href="welcome.html">
+            <button type="button">Voltar</button>
+        </a>
     </body>
 </html>

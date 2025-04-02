@@ -74,5 +74,8 @@
                 out.print ("Mensagem de erro: " + x.getMessage());
             }
         %>
+        <a href="welcome.html">
+            <button type="button">Voltar</button>
+        </a>
     </body>
 </html>

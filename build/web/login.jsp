@@ -2,7 +2,6 @@
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.*"%>
 
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -30,7 +29,7 @@
 
             conecta = DriverManager.getConnection(url,user,password);
 
-            String sql=("SELECT * from tb_login WHERE usuario=? AND senha=?");
+            String sql=("SELECT * FROM tb_login WHERE usuario=? AND senha=?");
 
             st = conecta.prepareStatement(sql);
             st.setString(1,usuario);

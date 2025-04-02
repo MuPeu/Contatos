@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Consultar Contato</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">        
+    </head>
+    <body>
+        <h1>Consultar Contato</h1>
+        <div class="buscar_container">
+            <h2>Insira o primeiro nome, ou o mês de aniversário, para buscar o contato.</h2>
+            <form action="buscar.jsp" method="post">
+                <label for="contato">Contato:</label>
+                <input type="text" id="contato" name="contato" placeholder="Digite o contato que quer consultar" required>
+                <input type="submit" value="Buscar">
+            </form>
+        </div>
+        <div class="button">
+            <a href="welcome.html">
+                <button type="button">Voltar</button>
+            </a>
+        </div>
+    </body>
+</html>
