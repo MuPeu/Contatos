@@ -43,6 +43,9 @@
             <!--Finalizei o código java acima. Agora vou criar o corpo da tabela html para mostar os dados trazidos do Banco de Dados-->
             <tr>
                 <td>
+                    <a href="puxar_cont.jsp?id_cpf=<%= rs.getString("id_cpf") %>">Editar</a>
+                </td>
+                <td>
                     <%=rs.getString("CPF")%>
                 </td>
                 <td>
