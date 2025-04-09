@@ -1,9 +1,13 @@
+*{
+    margin: 0px;
+}
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    width: 100%; 
     background-color: #f4f4f4;
 }
 
@@ -20,7 +24,7 @@ input {
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
-    background-color:#f0f8ff; /* Cor de fundo azul claro */
+    background-color:#f0f8ff; /*Cor de fundo azul claro*/
     border-radius: 8px;
     font-size: 16px;
 }
@@ -60,12 +64,12 @@ p {
     font-size: 18px;
 }
 
+.box-alteracao  {
+    background-color: white;
+}
+
 /* Estilização geral dos formulários */
 .form-container {
-    background: white;
-    padding: 20px;
-    border-radius: 12px; /* Cantos arredondados */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 300px;
+    
+   
 }

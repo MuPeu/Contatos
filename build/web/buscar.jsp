@@ -71,9 +71,7 @@
         </table>
         <%
                     } else {
-        %>
-        <p>Nenhum contato encontrado com o nome especificado.</p>
-        <%
+                        
                     }
 
                     // Se o contato for um mês de nascimento
@@ -123,9 +121,7 @@
         </table>
         <%
                     } else {
-        %>
-        <p>Nenhum contato encontrado com o mês de nascimento especificado.</p>
-        <%
+                        
                     }
 
                 } else {
